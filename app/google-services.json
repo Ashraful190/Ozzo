@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "672395871506",
+    "project_id": "ozzo-1300b",
+    "storage_bucket": "ozzo-1300b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672395871506:android:5a407dc5c216bf14ecdfcb",
+        "android_client_info": {
+          "package_name": "com.haxio.ozzo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU-nQ5t6bqp_cCprU9BkujRe6nBm13lOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
