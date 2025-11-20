@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp"
     tools:context=".views.login.LoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher_foreground"
+        android:layout_marginBottom="@dimen/_24sdp" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:fontFamily="@font/bebas_neue"
+        android:gravity="center"
+        android:text="Welcome Back!"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textColor="#333333" />
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:hint="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        app:passwordToggleEnabled="true"
+        android:hint="Password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:backgroundTint="#F57C00"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:fontFamily="@font/poppins"
+        android:text="Login"
+        android:textColor="#333333"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        app:strokeColor="#333333"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:fontFamily="@font/poppins"
+        android:text="Don't have an account? Register"
+        android:textColor="#212121"
+        android:textStyle="bold" />
+
+</LinearLayout>

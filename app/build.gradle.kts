@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.android.hilt.dagger)
+    kotlin("kapt")
 }
 
 android {
@@ -36,6 +38,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -57,4 +62,15 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //ssp sdp
+    implementation(libs.sdp.android)
+    implementation(libs.ssp.android)
+
+    //lottie
+    implementation(libs.lottie)
+    //dagger hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+
 }
